@@ -5,10 +5,20 @@ import { Link } from "react-router-dom"
 
 const Navbar = () => {
     const [click, setclick] = useState(false);
-    const handleclick = () => setclick(!click)
+    const handleclick = () => setclick(!click);
+
+    const [color,setcolor] = useState(false);
+    const  changecolor = () =>{
+        if(window.scrollY>=100){
+            setcolor(true);
+        }
+        else{
+            setcolor(false);
+        }
+    }
 
     return (
-        <div className="header">
+        <div className={color? "header header-bg" : "header"}>
             <Link to="/">
                 <h1>Portfolio</h1>
             </Link>
