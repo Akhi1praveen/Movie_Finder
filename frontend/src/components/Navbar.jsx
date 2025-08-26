@@ -2,8 +2,9 @@ import "./Navbarstyle.css"
 import React, { useState } from 'react'
 import { FaBars, FaHeart, FaTimes } from "react-icons/fa";
 import { Link } from "react-router-dom"
+import Search from "./Search";
 
-const Navbar = () => {
+const Navbar = ({setSearchQuery}) => {
     const [click, setclick] = useState(false);
     const handleclick = () => setclick(!click);
 
@@ -25,6 +26,7 @@ const Navbar = () => {
             <Link to="/">
                 <h1>Movie Finder</h1>
             </Link>
+            <Search setSearchQuery={setSearchQuery}></Search>
             <ul className={click ? "nav-menu active" : "nav-menu"}>
                 <li>
                     <Link to="/">Home</Link>

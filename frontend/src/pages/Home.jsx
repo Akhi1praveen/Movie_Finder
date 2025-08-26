@@ -1,15 +1,17 @@
-import React from 'react'
-import Navbar from '../components/Navbar'
-import { Link } from 'react-router-dom'
-import Movies from '../components/Movies'
+  import React, { useState } from 'react'
+  import Navbar from '../components/Navbar'
+  import { Link } from 'react-router-dom'
+  import Movies from '../components/Movies'
 
-const Home = () => {
-  return (
-    <div>
-      <Navbar/>
-      <Movies></Movies>
-    </div>
-  )
-}
+  const Home = () => {
+    const [searchQuery, setSearchQuery] = useState("");
 
-export default Home
+    return (
+      <div>
+        <Navbar setSearchQuery={setSearchQuery}/>
+        <Movies searchQuery={searchQuery} ></Movies>
+      </div>
+    )
+  }
+
+  export default Home

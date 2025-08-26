@@ -13,7 +13,7 @@
     max-width: 1140px;
     margin: auto;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-gap: 40px;
 }
 
@@ -25,15 +25,15 @@
     background: rgba(21, 21, 21, 0.633);
     overflow: hidden;
     border: 2px solid #333;
-    padding: 1.2rem;
+    padding: 1.5rem;
     border-radius: 8px;
     color: #fff;
 }
 
 .movie-img {
     position: relative;
-    width: 80%;
-    margin: auto;
+    width: 100%;
+    /* margin: auto; */
     display: block;
     transition: filter 0.3s ease, opacity 0.3s ease;
 }
@@ -41,8 +41,11 @@
 .movie-card img {
     width: 100%;
     object-fit: cover;
-    aspect-ratio: 1/1;
+    transition: transform 0.1s ease-in-out;
     border-radius: 8px;
+}
+.movie-details{
+    padding-top: 2rem;
 }
 
 .heart {
@@ -62,7 +65,10 @@
 }
 
 .movie-card:hover img {
-    filter: blur(3px) brightness(0.5);
+    transform: scale(1.1);
+    background: #333;
+    opacity: 0.3;
+    transition: 0.3 ease;
 }
 
 .movie-card:hover .heart {
