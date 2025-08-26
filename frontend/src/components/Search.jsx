@@ -9,8 +9,6 @@ const Search = ({ setSearchQuery }) => {
         e.preventDefault()
         if (!searchQuery.trim()) return
         console.log("Searching for:", searchQuery);
-        // alert(searchQuery)
-        setSearchQuery("")
     }
     return (
         <div className="search">

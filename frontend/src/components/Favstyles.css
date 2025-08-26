@@ -4,6 +4,16 @@
     text-align: center;
     padding: 4rem 0 2rem 0;
 }
+.fav-header h1{
+    margin: 2rem 0;
+}
+.fav-container{
+    max-width: 1140px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 40px;
+}
 .fav-empty{
     width: 50%;
     margin: 8rem auto;
@@ -11,4 +21,11 @@
     border: 1px solid rgb(105, 105, 105);
     border-radius: 8px;
     background: rgba(105, 105, 105,0.5);
+}
+@media screen and (max-width:640px) {
+    .fav-container {
+        max-width: 90%;
+        margin: auto;
+        grid-template-columns: 1fr;
+    }
 }

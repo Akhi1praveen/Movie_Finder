@@ -4,14 +4,14 @@ import Moviecard from './Moviecard'
 import Moviedata from './Moviecarddata'
 import { getPopularMovies, searchMovies } from '../services/api'
 
-const Movies = ({ searchQuery}) => {
+const Movies = ({ searchQuery }) => {
   const [movies, setMovies] = useState([]);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
-  
-   
 
-   useEffect(() => {
+
+
+  useEffect(() => {
     const fetchMovies = async () => {
       setLoading(true);
       try {
@@ -41,15 +41,13 @@ const Movies = ({ searchQuery}) => {
       {
         loading ? (<div className="loading">Loading...</div>) : (
           <div className='movie-container'>
-            {movies.map((val, ind) => {
+            {movies.map((movie) => {
               return (
-                val.title.toLowerCase().includes(searchQuery.toLowerCase()) &&
                 <Moviecard
-                  key={ind}
-                  imgsrc={`https://image.tmdb.org/t/p/w500${val.poster_path}`}
-                  title={val.title}
-                  text={val.release_date.split("-")[0]}
+                  movie={movie}
+                  key={movie.id}
                 />
+
               )
 
             })

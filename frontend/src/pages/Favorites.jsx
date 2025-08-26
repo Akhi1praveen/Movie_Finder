@@ -3,12 +3,13 @@ import Navbar from '../components/Navbar'
 import Favsection from '../components/Favsection'
 
 const Favorites = () => {
-  return (
-    <div>
-      <Navbar></Navbar>
-      <Favsection></Favsection>
-    </div>
-  )
+  
+    return (
+      <div>
+        <Navbar />
+        <Favsection />
+      </div>
+    );
 }
 
-export default Favorites
+export default Favorites;
