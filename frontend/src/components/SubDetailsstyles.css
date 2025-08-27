@@ -1,0 +1,64 @@
+.details-header {
+  display: flex;
+  gap: 2rem;
+  color: #fff;
+  padding: 1rem;
+  padding-top: 5rem;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+}
+
+.poster-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.poster {
+  width: 250px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.7);
+}
+
+.info-container {
+  flex: 3;
+  text-shadow: 0px 2px 6px rgba(0,0,0,0.7);
+}
+
+.info-container .movie-title {
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+.info-container.movie-title span {
+  font-weight: 400;
+  color: #bbb;
+}
+
+.meta {
+  margin: 0.5rem 0 1rem 0;
+  font-size: 1rem;
+  color: #ddd;
+}
+
+.score-section {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.circle-score {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 4px solid #21d07a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  background: rgba(0,0,0,0.6);
+}
+
