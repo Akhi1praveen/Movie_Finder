@@ -2,6 +2,7 @@ import "./Moviesstyle.css"
 import React, { useState } from 'react'
 import { FaHeart } from "react-icons/fa"
 import { useMovieContext } from "../contexts/MovieContext"
+import Details from "./Details"
 
 const Moviecard = ({ movie }) => {
     const { addToFavorites,

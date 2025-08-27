@@ -26,26 +26,40 @@ const Navbar = ({ setSearchQuery, setSelected, selected }) => {
             <Link to="/">
                 <h1>Movie Finder</h1>
             </Link>
-            <Search
-                setSearchQuery={setSearchQuery}
-                selected={selected}
-            ></Search>
-
-            <ul className={click ? "nav-menu active" : "nav-menu"}>
-                {
-                    (selected!=="Favorites")&&<Dropdown
+            {selected !== "" &&
+                <Search
+                    setSearchQuery={setSearchQuery}
                     selected={selected}
-                    options={["Movies", "Tv Shows"]}
-                    setSelected={setSelected}
-                />
+                ></Search>
+            }
+            <ul className={click ? "nav-menu active" : "nav-menu"}>
+                {(selected === "") ?
+                    <>
+                        <li>
+                            <Link to="/">Home</Link>
+                        </li>
+                        <li>
+                            <Link to="/favorites">Favorites</Link>
+                        </li>
+                    </> : selected === "Favorites" ?
+                    <li>
+                        <Link to="/">Home</Link> 
+                    </li>:
+                        <>
+                            <Dropdown
+                                selected={selected}
+                                options={["Movies", "Tv Shows"]}
+                                setSelected={setSelected}
+                            />
+                            <li>
+                                <Link to="/favorites">Favorites</Link>
+                            </li>
+                        </>
+
+
                 }
-                
-                <li>
-                    <Link to="/">Home</Link>
-                </li>
-                <li>
-                    <Link to="/favorites">Favorites</Link>
-                </li>
+
+
             </ul>
             <div className="ham-menu" onClick={handleclick}>
                 {click ? <FaTimes size={20} style={{ color: "#fff" }} /> : <FaBars size={20} style={{ color: "#fff" }} />}
