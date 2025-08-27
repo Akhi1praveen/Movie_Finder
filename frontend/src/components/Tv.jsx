@@ -46,6 +46,8 @@ const Tv = ({ searchQuery }) => {
                                 <Moviecard
                                     movie={tv}
                                     key={tv.id}
+                                    title={tv.name}
+                                    date={tv.first_air_date}
                                 />
 
                             )
