@@ -20,7 +20,6 @@
 
 .nav-menu li {
     padding: 12px 1rem;
-    /* margin-top: 12px; */
     border-radius: 10px;
 }
 
@@ -39,9 +38,7 @@
 .search {
     width: 100%;
     max-width: 500px;
-    /* center limit */
     margin: 0 auto;
-    /* center horizontally */
 }
 
 .search form {

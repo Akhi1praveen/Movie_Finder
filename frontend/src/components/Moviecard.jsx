@@ -19,21 +19,23 @@ const Moviecard = ({ movie }) => {
         <div className="movie-card">
             <div className="movie-img" >
                 <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt="img" />
-                <FaHeart size={30} onClick={onFavoriteClick} className={favorites ? "heart active" : "heart"} />
+                <button className="button" onClick={onFavoriteClick}>
+                    <FaHeart size={30}  className={favorites ? "heart active" : "heart"} />
+                </button>
             </div>
             <div className="movie-details">
                 {
-                    movie.title?<h2 className="movie-title">
-                    {movie.title}
-                </h2>:
-                <h2 className="movie-title">
-                    {movie.name}
-                </h2>
+                    movie.title ? <h2 className="movie-title">
+                        {movie.title}
+                    </h2> :
+                        <h2 className="movie-title">
+                            {movie.name}
+                        </h2>
                 }
                 {
-                    movie.release_date?
-                    <p>{movie.release_date?.split("-")[0]}</p>:
-                    <p>{movie.first_air_date?.split("-")[0]}</p>
+                    movie.release_date ?
+                        <p>{movie.release_date?.split("-")[0]}</p> :
+                        <p>{movie.first_air_date?.split("-")[0]}</p>
                 }
             </div>
         </div>
