@@ -3,14 +3,14 @@ import React, { useState } from 'react'
 import { FaHeart } from "react-icons/fa"
 import { useMovieContext } from "../contexts/MovieContext"
 
-const Moviecard = ({movie}) => {
-    const {addToFavorites,
+const Moviecard = ({ movie }) => {
+    const { addToFavorites,
         removeFromFavorites,
-        isFavorites} = useMovieContext()
+        isFavorites } = useMovieContext()
     const favorites = isFavorites(movie.id)
     const onFavoriteClick = (e) => {
         e.preventDefault()
-        if(favorites) removeFromFavorites(movie.id)
+        if (favorites) removeFromFavorites(movie.id)
         else addToFavorites(movie)
         console.log(favorites)
     }
@@ -22,8 +22,19 @@ const Moviecard = ({movie}) => {
                 <FaHeart size={30} onClick={onFavoriteClick} className={favorites ? "heart active" : "heart"} />
             </div>
             <div className="movie-details">
-                <h2 className="movie-title">{movie.title}</h2>
-                <p>{movie.release_date?.split("-")[0]}</p>
+                {
+                    movie.title?<h2 className="movie-title">
+                    {movie.title}
+                </h2>:
+                <h2 className="movie-title">
+                    {movie.name}
+                </h2>
+                }
+                {
+                    movie.release_date?
+                    <p>{movie.release_date?.split("-")[0]}</p>:
+                    <p>{movie.first_air_date?.split("-")[0]}</p>
+                }
             </div>
         </div>
     )

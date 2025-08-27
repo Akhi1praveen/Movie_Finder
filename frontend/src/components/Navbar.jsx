@@ -3,8 +3,9 @@ import React, { useState } from 'react'
 import { FaBars, FaHeart, FaTimes } from "react-icons/fa";
 import { Link } from "react-router-dom"
 import Search from "./Search";
+import Dropdown from "./Dropdown";
 
-const Navbar = ({setSearchQuery}) => {
+const Navbar = ({ setSearchQuery, setSelected, selected }) => {
     const [click, setclick] = useState(false);
     const handleclick = () => setclick(!click);
 
@@ -18,7 +19,6 @@ const Navbar = ({setSearchQuery}) => {
         }
     }
 
-
     window.addEventListener("scroll", changecolor);
 
     return (
@@ -26,8 +26,20 @@ const Navbar = ({setSearchQuery}) => {
             <Link to="/">
                 <h1>Movie Finder</h1>
             </Link>
-            <Search setSearchQuery={setSearchQuery}></Search>
+            <Search
+                setSearchQuery={setSearchQuery}
+                selected={selected}
+            ></Search>
+
             <ul className={click ? "nav-menu active" : "nav-menu"}>
+                {
+                    (selected!=="Favorites")&&<Dropdown
+                    selected={selected}
+                    options={["Movies", "Tv Shows"]}
+                    setSelected={setSelected}
+                />
+                }
+                
                 <li>
                     <Link to="/">Home</Link>
                 </li>

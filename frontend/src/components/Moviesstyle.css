@@ -13,8 +13,8 @@
     grid-gap: 40px;
 }
 
-.movie-header h1 {
-    margin: 2rem 0;
+.drop-down .dropdown-toggle {
+    font-size: 2rem;
 }
 
 .movie-card {

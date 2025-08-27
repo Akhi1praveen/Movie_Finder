@@ -2,7 +2,7 @@ import { FaSearch } from "react-icons/fa"
 import "./Navbarstyle.css"
 import React, { useState } from 'react'
 
-const Search = ({ setSearchQuery }) => {
+const Search = ({ setSearchQuery,selected }) => {
 
 
     const handleSearch = (e) => {
@@ -15,7 +15,7 @@ const Search = ({ setSearchQuery }) => {
             <form onSubmit={handleSearch} className="Search-form">
                 <input
                     type="text"
-                    placeholder="Search movies..."
+                    placeholder={`Search ${selected}...`}
                     className="Search-input"
                     onChange={(e) => setSearchQuery(e.target.value)}
                 />
