@@ -16,6 +16,9 @@
 .drop-down .dropdown-toggle {
     font-size: 2rem;
 }
+.drop-down button{
+    margin: 1rem 0;
+}
 
 .movie-card {
     background: rgba(21, 21, 21, 0.633);

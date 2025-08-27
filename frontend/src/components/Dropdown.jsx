@@ -30,7 +30,8 @@ const Dropdown = ({ selected,setSelected, options}) => {
         className="dropdown-toggle"
         onClick={() => setIsOpen(!isOpen)}
       >
-        {selected} ▼
+        {selected} <span style={{ display: "inline-block", fontSize: "1rem",top:"0"}}>▼</span>
+
       </button>
 
       {isOpen && (

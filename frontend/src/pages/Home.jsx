@@ -6,7 +6,7 @@ import Tv from '../components/Tv'
 
 const Home = () => {
   const [searchQuery, setSearchQuery] = useState("");
-  const [selected, setSelected] = useState("Categories");
+  const [selected, setSelected] = useState("Movies");
 
 
   return (
@@ -16,7 +16,7 @@ const Home = () => {
         setSelected={setSelected}
         selected={selected}
       />
-      {(selected === "Categories" || selected === "Movies" )&&(
+      {(selected === "Movies" )&&(
       <Movies searchQuery={searchQuery} ></Movies>
       )}
       {(selected === "Tv Shows")&&(

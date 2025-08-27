@@ -35,7 +35,12 @@
 .dropdown-item:hover {
   background: #444;
 }
-
+button{
+  border-radius: 10px;
+}
+button:hover {
+  background: rgba(80, 80, 80, 0.436);
+}
 @media screen and (max-width:640px) {
   .dropdown-toggle {
   font-size: 2rem;

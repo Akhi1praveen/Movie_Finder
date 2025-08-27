@@ -19,13 +19,17 @@
 }
 
 .nav-menu li {
-    padding: 0 1rem;
-    margin-top: 12px;
+    padding: 12px 1rem;
+    /* margin-top: 12px; */
+    border-radius: 10px;
 }
 
 .nav-menu li a {
     font-size: 1.2rem;
     font-weight: 500;
+}
+.nav-menu li:hover{
+    background: #444;
 }
 
 .ham-menu {
