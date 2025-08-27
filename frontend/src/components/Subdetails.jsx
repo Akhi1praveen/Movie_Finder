@@ -1,4 +1,4 @@
-import "./Subdetailsstyles.css"
+import "./SubDetailsstyles.css"
 import React from 'react'
 
 const Subdetails = ({ details }) => {
