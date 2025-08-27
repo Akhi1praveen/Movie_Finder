@@ -16,7 +16,25 @@
 .tv-header h1 {
     margin: 2rem 0;
 }
+.load-more {
+  text-align: center;
+  margin: 2rem 0;
+}
 
+.load-more button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #ff4444;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.load-more button:hover {
+  background-color: #cc0000;
+}
 @media screen and (max-width:640px) {
     .tv-container {
         max-width: 90%;

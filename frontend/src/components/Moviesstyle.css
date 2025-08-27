@@ -79,8 +79,21 @@
     opacity: 0;
     transition: opacity 0.3s ease;
 }
+.load-more button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #ff4444;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s;
+}
 
-/* Responsive */
+.load-more button:hover {
+  background-color: #cc0000;
+}
+
 @media screen and (max-width: 640px) {
     .movie-container {
         max-width: 90%;
@@ -95,6 +108,11 @@
         color: #676767;
         border: 2px solid #333;
         z-index: 10;
+        opacity: 1;
+    }
+
+    .movie-card:hover img {
+        transform: none;
         opacity: 1;
     }
 }
