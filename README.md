@@ -49,9 +49,10 @@ Built as part of my journey to learn **React fundamentals** including components
    - Go to api.jsx file in services folder
 
    - Add your TMDB API key inside it:
-
+```bash
    const API_KEY = "Your_api_key_here";
-   Note: For security you need to create an environmental variable for api key at the time of deployment and make it sensitive then paste the variable name instead of key.
+```
+   - Note: For security you need to create an environmental variable for api key at the time of deployment and make it sensitive then paste the variable name instead of key.
 5. **Start the project**
    ```bash
    npm run dev
