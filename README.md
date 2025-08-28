@@ -23,6 +23,13 @@ Built as part of my journey to learn **React fundamentals** including components
 ---
 
 ## 📸 Screenshots  
+<img width="1854" height="939" alt="image" src="https://github.com/user-attachments/assets/bba5d159-71b3-4982-93b1-8df028081d2c" />
+
+<img width="1859" height="935" alt="image" src="https://github.com/user-attachments/assets/8999736d-bbed-463a-bc0e-b8395c71ab5c" />
+
+<img width="1900" height="852" alt="image" src="https://github.com/user-attachments/assets/6af9b0b4-1876-4f4e-bbd9-74d7330a7ee6" />
+
+<img width="1885" height="919" alt="image" src="https://github.com/user-attachments/assets/3f621ca3-6532-4555-9bd9-9793095d0481" />
 
 ---
 
