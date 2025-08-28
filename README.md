@@ -18,7 +18,7 @@ Built as part of my journey to learn **React fundamentals** including components
 - **Frontend**: React (Hooks, Props, State)  
 - **Styling**: CSS 
 - **API**: The Movie Database (TMDB) API  
-- **Deployment**: Netlify / Vercel  
+- **Deployment**: Vercel  
 
 ---
 
